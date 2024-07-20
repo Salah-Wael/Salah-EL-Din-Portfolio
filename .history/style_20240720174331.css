@@ -132,16 +132,16 @@ section p {
   
 }
 
-#projects .image-display img {
+.image-display img {
   width: 600px;
-  height: 400px;
+  height: 300px;
   border: 2px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #resume .image-display img {
   width: 600px;
-  height: 600px;
+  height: 300px;
   border: 2px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
