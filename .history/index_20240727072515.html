@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salah EL-Din Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Salah El-Din</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="about">
+    <div class="about">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Hi there! 👋<br>
+          My name is Salah EL-Din <br> I'm a <span>Back End Web Developer.</span>
+          I'm a fresh graduate from the Computer Science and Artificial Intelligence Faculty.
+          My main interest lies in back-end development using PHP and the Laravel framework.
+          I also hold a certificate from the Information Technology Institute (ITI) in Back-end development using PHP and Laravel.
+          I'm eager to gain practical experience in this field.
+          Currently, I am looking for a job for 6 months before I apply for military service in January.
+          
+        </p>
+      </div>
+      <div>
+        <img src="./img//Salah EL-Din Wael2.jpg" alt="Salah EL-Din">
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="projects-container">
+        <a href="https://heros.rf.gd/" target="_blank">
+          <div class="project">
+            <div class="image-display">
+              <img id="heros" src="img/projects/heros registration.png" alt="heros registration">
+            </div>
+            <h3>Heros Project</h3>
+          </div>
+        </a>
+      </div>
+      <div class="projects-container">
+        <a href="https://sala7.great-site.net/" target="_blank">
+          <div class="project">
+            <div class="image-display">
+              <img id="ecommerce" src="img/projects/ecommerce home.png" alt="Sala7 E_commerce">
+              
+            </div>
+            <h3>E_commerce Project</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="cv-container">
+      <div class="project">
+        <h3>Salah EL-Din resume</h3>
+        <div class="image-display">
+          <img id="CV" src="img/CV/Salah EL-Din resume_page-0001.jpg" alt="Salah EL-Din resume">
+        </div>
+        <div class="thumbnails">
+          <img src="img/CV/Salah EL-Din resume_page-0001.jpg" alt="Salah EL-Din resume" 
+          onclick="swapImage('img/CV/Salah EL-Din resume_page-0001.jpg')">
+
+          <img src="img/CV/Salah EL-Din resume_page-0002.jpg" alt="Salah EL-Din resume" 
+          onclick="swapImage('img/CV/Salah EL-Din resume_page-0002.jpg')">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <address>
+      <a href="mailto:sasa.wael2016@gmail.com">sasa.wael2016@gmail.com</a><br>
+      <a href="https://api.whatsapp.com/send/?phone=%2B201155800086" target="_blank">+20 1155 8000 86</a><br>
+      <a href="https://www.linkedin.com/in/salah-eldin" target="_blank">Linkedin</a><br>
+      <a href="https://github.com/Salah-Wael" target="_blank">Github</a><br>
+    </address>
+  </section>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const herosImages = [
+        'img/projects/heros registration.png',
+        'img/projects/heros create news.png',
+        'img/projects/heros payment.png'
+      ];
+      const ecommerceImages = [
+        'img/projects/ecommerce home.png',
+        'img/projects/products.png'
+      ];
+
+      let currentHerosIndex = 0;
+      const herosImage = document.getElementById('heros');
+
+      function swapHerosImage() {
+        currentHerosIndex = (currentHerosIndex + 1) % herosImages.length;
+        herosImage.src = herosImages[currentHerosIndex];
+      }
+      setInterval(swapHerosImage, 2000); // Change image every 2 seconds
+
+      let currentEcommerceIndex = 0;
+      const ecommerceImage = document.getElementById('ecommerce');
+
+      function swapEcommerceImage() {
+        currentEcommerceIndex = (currentEcommerceIndex + 1) % ecommerceImages.length;
+        ecommerceImage.src = ecommerceImages[currentEcommerceIndex];
+      }
+
+      setInterval(swapEcommerceImage, 2000); // Change image every 2 seconds
+    });
+
+
+
+    function swapImage(newSrc) {
+      document.getElementById('CV').src = newSrc;
+    }
+  </script>
+</html>
